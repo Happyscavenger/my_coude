@@ -7,8 +7,10 @@
 
 import scrapy
 
-
 class GoldTimeItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    id = scrapy.Field()
+    title_content = scrapy.Field()
+    time_show = scrapy.Field()
+    url = scrapy.Field()

@@ -6,8 +6,8 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
-
+# from fake_useragent import UserAgent
+import fake_useragent
 class GoldTimeSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
@@ -101,3 +101,12 @@ class GoldTimeDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class RandomUseragentMiddleware(object):
+
+    def process_request(self,request,spider):
+        # location = './fake_useragent%s.json' % fake_useragent.VERSION
+        location = './fake_useragent0.1.10.json'
+        ua = fake_useragent.UserAgent(path=location)
+        request.headers['User-Agent'] = ua.random
