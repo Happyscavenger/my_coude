@@ -10,7 +10,7 @@ from copy import deepcopy
 class Qianchenwuyou(object):
 
     def __init__(self):
-        self.order = '26d2800bc73ed96215a90f60da7c654e'
+        self.order = 'xxxxx'
         self.apiUrl = 'http://api.ip.data5u.com/dynamic/get.html?order=' + self.order
         self.res = ''
         self.area_queue = Queue()
