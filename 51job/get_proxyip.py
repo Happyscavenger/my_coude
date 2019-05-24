@@ -23,7 +23,7 @@ def IsSet():
 class Getip(object):
 
     def __init__(self):
-        self.order = 'ef8e072865d9e1afdd085731eb44f5d6'
+        self.order = 'xxxx'
         self.apiUrl = 'http://api.ip.data5u.com/dynamic/get.html?order=' + self.order
         self.res = ""
 
