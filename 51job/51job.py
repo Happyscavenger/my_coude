@@ -194,11 +194,11 @@ class Qianchenwuyou(object):
             info['scale'] = re.search(r'<span class="i_people"></span>(.*)?</p>', res).group(1)
             info['company_type'] = re.search(r'<span class="i_flag"></span>(.*)?</p>', res).group(1)
             conn = pymysql.connect(
-                host='rm-uf6t4r3u8vea8u3404o.mysql.rds.aliyuncs.com',
+                host='xxxxx',
                 port=3306,
-                user='caijisa',
-                passwd='Caijisa123',
-                db='lansi_data_collection',
+                user='xxx',
+                passwd='xxx',
+                db='xxxx',
                 charset='utf8')
             cursor = conn.cursor()
             sql = """Replace into `51job` (`ID`,`area`,`plate`,`company_addr`,`position`,`min_salary`,`max_salary`,`industry`,`scale`,`company_type`,`url`)values(%d,"%s","%s","%s","%s",%d,%d,"%s","%s","%s","%s")"""\
